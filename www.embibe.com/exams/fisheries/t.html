@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQAGU1VbABAGUVNWAwIOUl0=",licenseKey:"686a80ad4c",applicationID:"652443949"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<meta name='robots' content='noindex, follow' />
+
+<title>Page not found - Embibe Exams</title>
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Page not found - Embibe Exams" />
+<meta property="og:site_name" content="Embibe Exams" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.embibe.com/exams/#website","url":"https://www.embibe.com/exams/","name":"Embibe Exams","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.embibe.com/exams/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//www.embibe.com' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.embibe.com/exams/wp-includes/css/dist/block-library/style.min.css' media='all' />
+<link rel='stylesheet' id='slick-theme-css' href='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/lib/slick/slick-theme.css' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/lib/slick/slick.css' media='all' />
+<link rel='stylesheet' id='theme-widgets-css' href='https://www.embibe.com/exams/wp-content/themes/embibe/assets/css/widgets.css' media='all' />
+<link rel='stylesheet' id='not-found-css' href='https://www.embibe.com/exams/wp-content/themes/embibe/assets/css/404.css' media='all' />
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.embibe.com/exams/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#038;ver=1' id='startertheme-mathjax-js'></script>
+<script src='https://www.embibe.com/exams/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script src='https://www.embibe.com/exams/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/lib/slick/slick.js' id='slick-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/menu.js' id='menu-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/sliders.js' id='sliders-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/gtm-tags.js' id='gtm-tags-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/signup-popup.js' id='singup-popup-js'></script>
+<link rel="https://api.w.org/" href="https://www.embibe.com/exams/wp-json/" /><link rel="icon" href="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2022/04/05194541/favicon.ico" sizes="32x32" />
+<link rel="icon" href="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2022/04/05194541/favicon.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2022/04/05194541/favicon.ico" />
+<meta name="msapplication-TileImage" content="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2022/04/05194541/favicon.ico" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+<body class="error404">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4D3ZSC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G9D5BV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+<div class="container">
+<div class="header-wrap">
+<div class="logo">
+<a href="//www.embibe.com" title="logo">
+<img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2022/02/18173224/Student-app-embibe-logo.png" alt="Embibe Logo" width="200" height="60" />
+</a>
+</div>
+<div class="nav-menu">
+<div class="nav-menu">
+<nav class="navbar">
+<ul class="nav">
+<li class="nav-item nav-ev">
+<a href="https://www.embibe.com/">Students</a>
+</li>
+<li class="nav-item nav-ev">
+<a href="https://www.embibe.com/parent">Parents</a>
+</li>
+ <li class="nav-item nav-ev">
+<a href="https://www.embibe.com/schools">Schools</a>
+</li>
+<li class="nav-item nav-ev">
+<a href="https://www.embibe.com/success">SUCCESS STORIES</a>
+</li>
+<li class="nav-item nav-ev">
+<a href="https://www.embibe.com/outcomes">OUTCOMES</a>
+</li>
+<li class="nav-item nav-ev">
+<a href="https://www.embibe.com/ai-in-education">AI</a>
+</li>
+<li class="nav-item blogmenuclick">
+<a class="last_menu" href="javascript:void(0);">Blog <div class="arrow"><img src="" alt="down arrow"></div></a>
+<div class="mega-menu-wrapper">
+<ul class="mega-menu">
+<li>
+<div class="col-2">
+<h3 class="mega-menu-heading">Engineering</h3>
+<ul>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/jee-main/">JEE MAIN 2022 </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/jee-advanced/">JEE ADVANCED EXAM </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/bitsat/">BITSAT </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/gujcet/">GUJCET </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="col-2">
+<h3 class="mega-menu-heading">Medical</h3>
+<ul>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/nta-neet/">NEET </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/ap-eamcet-pharmacy/">AP EAPCET </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/ts-eamcet-pharmacy/">TS EAPCET </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/amu-at-medical/">AMU AT MEDICAL </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="col-2">
+<h3 class="mega-menu-heading">Banking</h3>
+<ul>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/ibps-po-prelims/">IBPS PO PRELIMS </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/ibps-clerk-prelims/">IBPS CLERK PRELIMS </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/sbi-po-prelims/">SBI PO PRELIMS </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/sbi-clerk-prelims/">SBI CLERK PRELIMS </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="col-2">
+<h3 class="mega-menu-heading">Foundation</h3>
+<ul>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/cbse-class-12/">CBSE CLASS 12 </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/cbse-class-10/">CBSE CLASS 10 </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/isc-class-12/">ISC CLASS 12 </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/icse-class-10/">ICSE CLASS 10 </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="col-2">
+ <h3 class="mega-menu-heading">Others</h3>
+<ul>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/rrb-ntpc-cbt-1/">RRB NTPC </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/upsc-cds/">UPSC CDS </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/gate/">GATE </a></li>
+<li class="nav-subev"><a href="https://www.embibe.com/exams/iimcat/">CAT </a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="nav-item gt-signup-btn" style="display:none;"> <a href="javascript:void(0);" class="getstarted footer-signup-btn" onclick="GeventSup('Header')">Free Sign Up</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="not-found mobile-not-found-bg">
+<div class="container">
+<div class="not-found-inner">
+<div class="not-found-img">
+<img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2022/06/08202344/Gif-404.gif" alt="page not found" width="328" height="328">
+</div>
+<div class="not-found-des">
+<p><b>Opps!</b> We missed it</p>
+<p>We call this wasted attempt on embibe</p>
+<a href="https://www.embibe.com/exams" class="primary-button btn">Take me to Exam Blog</a>
+</div>
+<div class="not-found-img-mobile">
+<img src="https://preprod.embibe.com/exams/wp-content/uploads/2022/05/no-internet.webp" alt="page not found" width="283" height="283">
+</div>
+<div class="mobile-not-found-des">
+<p><b>Oops!</b> We missed it</p>
+<p>No more Wasted Attempts. Let’s start fresh!</p>
+<a href="https://www.embibe.com/exams" class="primary-button btn">Take me to Exam Blog</a>
+</div>
+</div>
+</div>
+</section>
+<div class="footer-slider">
+<div class="container">
+<div class="footer-inner-slide">
+<div class="footer-award-slide">
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.edtechdigest.com/2021-finalists-winners/" target="_blank" rel="nofollow">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125450/embibe-logo.png" alt="Embibe" width="200" height="100" />
+</div>
+<div class="text">
+<p>39 Insightful Publications</p>
+</div>
+ </a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.younggloballeaders.org/new-class?utf8=%E2%9C%93&region=a0Tb00000000DCGEA2" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125304/world-economic-forum.png" alt="World Economic Forum" width="200" height="100" />
+</div>
+<div class="text">
+<p>Embibe Is A Global Innovator</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a rel="nofollow" target="_blank" href="https://economictimes.indiatimes.com/news/company/corporate-trends/etpwla-2019-embibe-founder-aditi-avasthi-gets-accenture-vaahini-innovator-of-the-year/videoshow/68636240.cms">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125227/accenture-1.png" alt="accenture" width="200" height="100" />
+</div>
+<div class="text">
+<p>Innovator Of The Year Education Forever</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://ieeexplore.ieee.org/abstract/document/9357868" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125248/placement-logo.png" alt="Interpretable And Explainable AI " width="200" height="100" />
+</div>
+<div class="text">
+<p>Interpretable And Explainable AI </p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.youtube.com/watch?v=P9rpYLOdBdM" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125255/tedx-log-1.png" alt="Tedx" width="200" height="100" />
+</div>
+<div class="text">
+<p>Revolutionizing Education Forever</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://yourstory.com/2017/12/amazon-ai-awards-2017/" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125228/amazon-conclave.png" alt="Amazon AI Conclave" width="200" height="100" />
+</div>
+<div class="text">
+<p>Best AI Platform For Education</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+ <div class="client-logo">
+<a href="https://www.forbesindia.com/article/checkin/embibe-a-teachers-pet-tool/41195/1" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125237/forbes-india.png" alt="Forbes India" width="200" height="100" />
+</div>
+<div class="text">
+<p>Enabling Teachers Everywhere</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://dl.acm.org/doi/abs/10.1145/3375462.3375542" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125855/acm.png" alt="ACM" width="200" height="100" />
+</div>
+<div class="text">
+<p>Decoding Performance</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.facebook.com/embibe.me/videos/470153320208489" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125301/wes.png" alt="World Education Summit" width="200" height="100" />
+</div>
+<div class="text">
+<p>Leading AI Powered Learning Solution Provider</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://educationaldatamining.org/files/conferences/EDM2020/EDM2020Proceedings.pdf" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125232/data-mining.png" alt="Journal of Educational Data Mining" width="200" height="100" />
+</div>
+<div class="text">
+<p>Auto Generation Of Tests</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.youtube.com/watch?v=5uMyarR5-5o" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125233/disrupt.png" alt="BW Disrupt" width="200" height="100" />
+</div>
+<div class="text">
+<p>Disrupting Education In India</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://link.springer.com/book/10.1007/978-3-319-91464-0" rel="nofollow" target="_blank">
+<div class="logo-img">
+ <img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125249/springer.png" alt="Springer" width="200" height="100" />
+</div>
+<div class="text">
+<p>Problem Sequencing Using DKT</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://blog.embibe.com/fortune-india-40-under-40-aditi-avasthi-indiavidual-learning-pvt-ltd-8cee85f9e1e4?gi=bc00e735e2dd" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17130722/fortune-india.png" alt="Fortune India Forty Under Fourty" width="200" height="100" />
+</div>
+<div class="text">
+<p>Help Students Ace India's Toughest Exams</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.edtechdigest.com/2020-finalists-winners/" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125235/edtech.png" alt="Edtech Digest" width="200" height="100" />
+</div>
+<div class="text">
+<p>Best Education AI Platform</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.youtube.com/watch?v=brIgBd1thLU" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125244/nasscom-product-connet.png" alt="Nasscom Product Connect" width="200" height="100" />
+</div>
+<div class="text">
+<p>Unlocking AI Through Saas</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.techinasia.com/how-embibe-aims-to-score-higher-with-100-marks-in-its-bag" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125254/tech-in-asia.png" alt="Tech In Asia" width="200" height="100" />
+</div>
+<div class="text">
+<p>Fixing Student’s Behaviour With Data Analytics</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://yourstory.com/2014/11/aditi-avasthi-embibe/amp" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125306/your-story.png" alt="Your Story" width="200" height="100" />
+</div>
+<div class="text">
+<p>Leveraging Intelligence To Deliver Results</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.youtube.com/watch?v=QmLqGU45cWM" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125230/city-ai.png" alt="City AI" width="200" height="100" />
+</div>
+<div class="text">
+<p>Brave New World Of Applied AI</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.youtube.com/watch?v=Bm4LO5zTckQ&t=203s" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125300/vccircle.png" alt="vccircle" width="200" height="100" />
+</div>
+<div class="text">
+<p>You Can Score Higher</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.youtube.com/watch?v=mDFe9DwtzFc" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125239/ink-talks.png" alt="INK Talks" width="200" height="100" />
+</div>
+<div class="text">
+<p>Harnessing AI In Education</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.youtube.com/watch?v=lqPieL12k_0" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125240/kstart-1.png" alt="kstart" width="200" height="100" />
+</div>
+<div class="text">
+<p>Personalized Ed-tech With AI</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.startupgrind.com/events/details/startup-grind-bangalore-presents-startup-grind-hosts-aditi-avasthi/" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125252/startupgrind.png" alt="StartUpGrind" width="200" height="100" />
+</div>
+<div class="text">
+<p>Exciting AI Platform, Personalizing Education</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.shethepeople.tv/news/all-the-winners-of-the-digital-women-awards/" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125245/placement-logo-2.png" alt="Digital Women Award" width="200" height="100" />
+</div>
+<div class="text">
+<p>Disruptor Award For Maximum Business Impact</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://twitter.com/embibe/status/1258713757884116992" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125242/mumbai-summit-2020-ai.png" alt="The Mumbai Summit 2020 AI" width="200" height="100" />
+</div>
+<div class="text">
+<p>Top 20 AI Influencers In India</p>
+</div>
+</a>
+</div>
+</div>
+<div class="slide">
+<div class="client-logo">
+<a href="https://www.fortuneindia.com/40under40/aditi-avasthi?year=2015" rel="nofollow" target="_blank">
+<div class="logo-img">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/02/17125258/uspto.png" alt="USPTO" width="200" height="100" />
+</div>
+<div class="text">
+<p>Proud Owner Of 9 Patents</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="dynamic-footer">
+<div class="container">
+<div class="footerouter">
+<div class="footerleft-col">
+<h3>Learn and Prepare for any exam you want!</h3>
+<div class="footernav">
+<div class="footernav-col">
+<h4>Classes</h4>
+<ul class="accordion-body"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728891 Footer_Class_Click"><a href="https://www.embibe.com/exams/cbse-class-12/">Class 12</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728892 Footer_Class_Click"><a href="https://www.embibe.com/exams/cbse-class-11/">Class 11</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728893 Footer_Class_Click"><a href="https://www.embibe.com/exams/cbse-class-10/">Class 10</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728894 Footer_Class_Click"><a href="https://www.embibe.com/exams/9th-cbse/">Class 9</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728896 Footer_Class_Click"><a href="https://www.embibe.com/exams/8th-cbse/">Class 8</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728899 Footer_Class_Click"><a href="https://www.embibe.com/exams/7th-cbse/">Class 7</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728903 Footer_Class_Click"><a href="https://www.embibe.com/exams/cbse-class-6/">Class 6</a></li>
+</ul> </div>
+<div class="footernav-col">
+<h4>NCERT Solutions</h4>
+<ul class="accordion-body"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728880 Footer_NCERT_Solutions_Click"><a href="https://www.embibe.com/exams/cbse-ncert-solutions-for-class-12/">NCERT Solutions for Class 12</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728882 Footer_NCERT_Solutions_Click"><a href="https://www.embibe.com/exams/cbse-ncert-solutions-for-class-11/">NCERT Solutions for Class 11</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728883 Footer_NCERT_Solutions_Click"><a href="https://www.embibe.com/exams/cbse-ncert-solutions-for-class-10/">NCERT Solutions for Class 10</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728884 Footer_NCERT_Solutions_Click"><a href="https://www.embibe.com/exams/cbse-ncert-solutions-for-class-9/">NCERT Solutions for Class 9</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728886 Footer_NCERT_Solutions_Click"><a href="https://www.embibe.com/exams/cbse-ncert-solutions-for-class-8/">NCERT Solutions for Class 8</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728888 Footer_NCERT_Solutions_Click"><a href="https://www.embibe.com/exams/cbse-ncert-solutions-for-class-7/">NCERT Solutions for Class 7</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728889 Footer_NCERT_Solutions_Click"><a href="https://www.embibe.com/exams/cbse-ncert-solutions-for-class-6/">NCERT Solutions for Class 6</a></li>
+</ul> </div>
+<div class="footernav-col">
+<h4>Mock Tests</h4>
+<ul class="accordion-body"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43507 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/jee-main-mock-test-series/">JEE Main Mock Test</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-315145 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/jee-advanced-mock-test/">JEE Advanced Mock Test</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43508 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/neet-mock-tests/">NEET Mock Test</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-315146 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/bitsat-mock-test/">BITSAT Mock Test</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43509 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/rrb-ntpc-mock-test/">RRB NTPC Mock Test</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43510 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/online-mock-tests-for-sbi-po/">SBI PO Mock Test</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43511 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/ibps-rrb-mock-test/">IBPS RRB Mock Test</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-315144 Footer_Mock_Test_Click"><a href="https://www.embibe.com/exams/cat-mock-test/">CAT Mock Test</a></li>
+</ul> </div>
+<div class="footernav-col">
+<h4>Crack Exams</h4>
+<ul class="accordion-body"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728956 Footer_Crack_Exams_Click"><a href="https://www.embibe.com/learn/home">Learn with Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728957 Footer_Crack_Exams_Click"><a href="https://www.embibe.com/practice/home">Practice with Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728959 Footer_Crack_Exams_Click"><a href="https://www.embibe.com/test/home">Take Tests with Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728964 Footer_Crack_Exams_Click"><a href="https://www.embibe.com/indian-states/">Indian States</a></li>
+</ul> </div>
+<div class="footernav-col">
+<h4>Company Links</h4>
+<ul class="accordion-body"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728906 Footer_Company_Links_Click"><a href="https://www.embibe.com/investor-relation">Investor Relations</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728907 Footer_Company_Links_Click"><a href="https://www.embibe.com/contactus">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728908 Footer_Company_Links_Click"><a href="https://www.embibe.com/tos">Terms &#038; Conditions</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728910 Footer_Company_Links_Click"><a href="https://www.embibe.com/takedown">Take Down Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728911 Footer_Company_Links_Click"><a href="https://www.embibe.com/privacy-policy">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728914 Footer_Company_Links_Click"><a href="https://www.embibe.com/notices">Notices</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728916 Footer_Company_Links_Click"><a href="https://www.embibe.com/helpdesk">Help</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728917 Footer_Company_Links_Click"><a href="https://www.embibe.com/joinus">Join Us</a></li>
+</ul> </div>
+</div>
+</div>
+<div class="footerright-col">
+<div class="innerblock">
+<div class="footerlogo">
+ <a href="https://www.embibe.com/">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/07/14083703/embibe-logo.png" alt="Embibe Logo" width="180" height="50"> </a>
+</div>
+<ul class="socilamedia">
+<li> <a href="https://www.youtube.com/channel/UCvctBJuSTb0ditEx5DUlGNw" title="Youtube" target="_blank" onclick="Geventfp('Youtube','Footer_Social_Icon_Click','Footer - Social Icons')"><i class="fa fa-youtube"></i></a> </li>
+<li> <a href="https://www.instagram.com/embibe.me" title="Instagram" target="_blank" onclick="Geventfp('Instagram','Footer_Social_Icon_Click','Footer - Social Icons')"><i class="fa fa-instagram"></i></a> </li>
+<li> <a href="https://twitter.com/embibe" title="Twitter" target="_blank" onclick="Geventfp('Twitter','Footer_Social_Icon_Click','Footer - Social Icons')"><i class="fa fa-twitter"></i></a> </li>
+<li> <a href="https://www.facebook.com/embibe.me" title="Facebook" target="_blank" onclick="Geventfp('Facebook','Footer_Social_Icon_Click','Footer - Social Icons')"><i class="fa fa-facebook"></i></a> </li>
+<li> <a href="https://www.linkedin.com/company/indiavidual-learning" title="Linkedin" target="_blank" onclick="Geventfp('Linkedin','Footer_Social_Icon_Click','Footer - Social Icons')"><i class="fa fa-linkedin-in"></i></a> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright">
+<div class="container-fluid wrapper">
+<div class="copyrightBox">
+<div class="embibe-terms"> <a href="https://www.embibe.com/tos" onclick="Geventfp('Terms & Conditions','Footer_Options_Click','Footer')">Terms & Conditions</a>
+<a href="https://www.embibe.com/privacy-policy" onclick="Geventfp('Privacy Policy','Footer_Options_Click','Footer')">Privacy Policy</a> </div>
+<p>© Indiavidual Learning Ltd.</p>
+<div class="footerlogo">
+<a href="https://www.embibe.com/">
+<img src="https://exams-in.s3.amazonaws.com/in-hi/wp-content/uploads/2022/07/14083703/embibe-logo.png" alt="Embibe Logo" width="140" height="40"> </a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="create-free-account" style="display:none;">
+<div class="wrapper-content">
+<div class="wrapper-bg">
+<div class="close close_popup close-modal"> <span></span> <span></span>
+</div>
+<div class="signup-main-screen form-content pop-show">
+<div class="pattern">
+<img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2022/05/31221551/jumping-around.png" alt="Pattern">
+<h3>Sign Up to Take Unlimited Free Mock Tests</h3>
+</div>
+<div class="form-account">
+<div class="right-form">
+<div class="right-colume">
+<h3 class="login_frm">CREATE A FREE ACCOUNT</h3>
+<form method="post">
+<input type="text" class="mobile_footer inpt" name="mobile" pattern="\d{3}" maxlength="10" placeholder="10 Digit Mobile Number">
+ <div id="mobile_error_footer" class="error" style="display: none;"></div>
+<div id="agree_error_footer" class="error" style="display: none;"></div>
+<input type="hidden" class="error1" name="error1" value="Please enter mobile number">
+<input type="hidden" class="error2" name="error2" value="Please enter a valid mobile number">
+<input type="hidden" class="error3" name="error3" value="Not a valid Phone Number">
+<input type="hidden" class="error4" name="error4" value="Please check Terms and Conditions">
+<input type="hidden" class="error5" name="error5" value="This mobile number already exists">
+<div class="check term">
+<div class="custom-checkbox">
+<input class="styled-checkbox agree_footer" id="ag_footer" type="checkbox" name="agree" value="value2">
+<label for="ag_footer">I agree to Embibe’s <a href="https://www.embibe.com/tos" target="_blank">Terms and
+Conditions</a></label>
+</div>
+</div>
+<input type="button" value="Sign Up" onclick="sigup_mob_common_widget()" class="button-md primary-button signupform-btn">
+</form>
+<div class="embibe-account"><a href="https://www.embibe.com/login" class="already_account" target="_blank" onclick="GeventAlacc('SignUp Pop-Up')">I already have an
+Embibe account</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="signup-otp-screen form-content pop-hide" id="ev_otp">
+<h3 class="login_frm">Enter OTP</h3>
+<form>
+<div class="otpinput">
+<input class="first otp-field" type="number" id="first" value="" required />
+<input class="second otp-field" type="number" id="second" min="0" max="9" value="" required />
+<input class="third otp-field" type="number" id="third" min="0" max="9" value="" required />
+<input class="fourth otp-field" type="number" id="fourth" min="0" max="9" value="" required />
+<input class="fifth otp-field" type="number" id="fifth" min="0" max="9" value="" required />
+<input class="sixth otp-field" type="number" id="sixth" min="0" max="9" value="" required />
+</div>
+<span class="send-otp-successfull success-msg" style="display:none;">OTP sent successfully</span>
+<span class="incorrect-otp error" style="display:none;">Incorrect OTP</span>
+<span class="please-enter-otp error" style="display:none;">Please Enter OTP</span>
+<span class="otp-expired error" style="display:none;">OTP has expired, please try again</span>
+<span class="resend-otp-successfull success-msg" style="display:none;">OTP re-sent successfully</span>
+<div class="Proceed">
+<a href="javascript:void(0)" class="button-md primary-button" id="otp-proceed-btn" onClick="procced_mob_otp_common_widget()">Proceed</a>
+<p class="resendotpwrapper" id="resentotpholder"><a href="javascript:void(0)" id="resendotp_btn" onclick="resend_otp_common_widget()" style="display:none;"> Resend OTP</a></p><div class="otpcounter-wrapper">
+<span id="otp_counter"></span>
+</div>
+</div>
+ </form>
+</div>
+</div>
+</div>
+</div>
+<span id="primary_goal" style="display:none"></span><span id="primary_exam" style="display:none"></span><script>
+    var themePath = 'https://www.embibe.com/exams/wp-content/themes/embibe';
+</script>
+<script id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id='rocket-preload-links-js-extra'>
+var RocketPreloadLinksConfig = {"excludeUris":"\/exams(\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$))|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.embibe.com\/exams","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/global.js' id='global-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/signup-with-otp.js' id='signup-with-otp-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/firstfold-signup.js' id='firstfold-signup-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/events.js' id='events-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/stripe.js' id='strip-js'></script>
+<script src='https://www.embibe.com/exams/wp-content/themes/embibe/assets/js/modules/fonts-load.js' id='fontsload-js'></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.embibe.com/exams/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"686a80ad4c","applicationID":"652443949","transactionName":"MlVaNxBXWxJQUEVYCgsfeQAWX1oPHgcBBQ==","queueTime":0,"applicationTime":601,"atts":"HhJZQVhNSBw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

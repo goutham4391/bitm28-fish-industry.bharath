@@ -1,0 +1,1 @@
+"use strict";jQuery(document).ready(function($){$(window).scroll(function(){$('.flotingbar').stop(!0,!0).hide();var mainConLen=$('.main-wrapper').height();if($(this).scrollTop()>=mainConLen-200&&$('.flotingbar').stop(!0,!0)){$('.flotingbar').slideUp()}else{$('.flotingbar').slideDown()}})})
